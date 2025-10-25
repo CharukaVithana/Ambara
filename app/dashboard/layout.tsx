@@ -5,6 +5,7 @@ import type { ReactNode } from "react"
 import { useState } from "react"
 import Sidebar from "@/components/dashboard/sidebar"
 import DashboardHeader from "@/components/dashboard/dashboard-header"
+import { ChatButton } from "@/components/chat-button"
 
 export default function DashboardLayout({
   children,

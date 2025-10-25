@@ -31,9 +31,11 @@ export default function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
             )}
           </Button>
         </Link>
-        <Button variant="ghost" size="icon">
-          <User size={20} />
-        </Button>
+        <Link href="/dashboard/profile">
+          <Button variant="ghost" size="icon">
+            <User size={20} />
+          </Button>
+        </Link>
       </div>
     </header>
   )
