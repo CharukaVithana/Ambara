@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { NotificationProvider } from '@/contexts/notification-context'
+import { ThemeProvider } from '@/components/theme-provider'
+import ChatButton from '@/components/chat-button'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
@@ -21,10 +23,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased`}>
-        <NotificationProvider>
-          {children}
-          <Analytics />
-        </NotificationProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <NotificationProvider>
+            {children}
+            <div id="chat-portal" />
+            <ChatButton />
+            <Analytics />
+          </NotificationProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

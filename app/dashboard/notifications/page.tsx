@@ -124,37 +124,39 @@ export default function NotificationsPage() {
               className="block"
             >
               <Card
-                className={`p-6 cursor-pointer hover:bg-accent transition-colors ${
-                  !notification.read ? "border-l-4 border-l-primary" : ""
+                className={`p-4 cursor-pointer hover:bg-accent/50 transition-colors ${
+                  !notification.read ? "border-l-2 border-l-primary" : ""
                 }`}
               >
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <h3 className="font-semibold">{notification.title}</h3>
-                      <Badge variant={getNotificationBadge(notification.type).variant as any}>
+                    <div className="flex items-center flex-wrap gap-2 mb-2">
+                      <h3 className="font-medium text-base">{notification.title}</h3>
+                      <Badge 
+                        variant={getNotificationBadge(notification.type).variant as any}
+                        className="h-6"
+                      >
                         {getNotificationBadge(notification.type).label}
                       </Badge>
-                      {!notification.read && (
-                        <div className="flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-primary"/>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={(e) => handleMarkAsRead(notification.id, e)}
-                            className="h-6 px-2 text-xs"
-                          >
-                            Mark as read
-                          </Button>
-                        </div>
-                      )}
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground">
                       {notification.description}
                     </p>
-                    <p className="text-xs text-muted-foreground mt-4">
-                      {new Date(notification.date).toLocaleDateString()}
-                    </p>
+                    <div className="flex items-center justify-between mt-2">
+                      <p className="text-xs text-muted-foreground">
+                        {new Date(notification.date).toLocaleDateString()}
+                      </p>
+                      {!notification.read && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={(e) => handleMarkAsRead(notification.id, e)}
+                          className="h-6 px-2 text-xs hover:bg-background"
+                        >
+                          Mark as read
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </Card>
