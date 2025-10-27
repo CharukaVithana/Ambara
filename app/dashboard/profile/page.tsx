@@ -93,15 +93,6 @@ export default function ProfilePage() {
                     </div>
                     <div className="grid gap-4 md:grid-cols-2">
                       <div className="grid gap-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="john@example.com"
-                          defaultValue="john@example.com"
-                        />
-                      </div>
-                      <div className="grid gap-2">
                         <Label htmlFor="phone">Phone Number</Label>
                         <Input
                           id="phone"

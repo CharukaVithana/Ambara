@@ -47,14 +47,6 @@ export default function ChatButton() {
                   Support Team • Just now
                 </span>
               </div>
-              <div className="bg-primary/10 p-3 rounded-lg max-w-[80%] ml-auto">
-                <p className="text-sm">
-                  Welcome to Ambara! We typically reply within a few minutes.
-                </p>
-                <span className="text-xs text-muted-foreground mt-1 block">
-                  Bot • Just now
-                </span>
-              </div>
             </div>
           </div>
 
