@@ -44,8 +44,8 @@ export default function ProfilePage() {
               </div>
               
               <div className="flex-1">
-                <h2 className="text-2xl font-semibold mb-2">John Doe</h2>
-                <p className="text-muted-foreground mb-4">john@example.com</p>
+                <h2 className="text-2xl font-semibold mb-2">Abcd Efgh</h2>
+                <p className="text-muted-foreground mb-4">abcdefgh@example.com</p>
                 <p className="text-sm text-muted-foreground">Member since October 2023</p>
               </div>
             </div>
@@ -78,16 +78,16 @@ export default function ProfilePage() {
                         <Label htmlFor="firstName">First Name</Label>
                         <Input
                           id="firstName"
-                          placeholder="John"
-                          defaultValue="John"
+                          placeholder="Abcd"
+                          defaultValue="Abcd"
                         />
                       </div>
                       <div className="grid gap-2">
                         <Label htmlFor="lastName">Last Name</Label>
                         <Input
                           id="lastName"
-                          placeholder="Doe"
-                          defaultValue="Doe"
+                          placeholder="Efgh"
+                          defaultValue="Efgh"
                         />
                       </div>
                     </div>
